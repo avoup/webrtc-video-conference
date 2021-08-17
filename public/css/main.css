@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* padding: 10px; */
+  }
+  .grid-item {
+    /* max-height: 250px; */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+  }
+  .grid-item p {
+      font-size: 20px;
+      margin: 0;
+  }
+  .grid-item video {
+      /* height: 250px; */
+      max-width: 100%;
+  }
+  .grid-item .kick_btn {
+      width: 100%;
+      height: 50px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #fff;
+      background-color: rgb(255 35 35);
+  }
+
+  #localVideo-container {
+      height: 250px;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      border: 2px solid gray;
+  }
+
+  #localVideo-container video {
+      width: 100%;
+      height: 100%;
+  }
