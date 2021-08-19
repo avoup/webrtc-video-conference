@@ -76,6 +76,8 @@ const webrtc = new Webrtc(
 );
 ```
 
+## Arguments
+
 -   **socket** - socket.io instance (_required at least version 4.1.3_)
 -   **pcConfig** - peer connection configuration. Stun/Turn servers can be passed here. If not provided webrtc will not use any servers and will be operational only on local network. Any number of stun and turn servers can be passed.
 
@@ -112,7 +114,7 @@ const webrtc = new Webrtc(
 
 ## webrtc.getLocalStream()
 
-After initialization local media stream should be accessed. This method noitifies server that it got stream and is ready to connect.
+After initialization local media stream should be accessed.
 
 ```js
 webrtc
@@ -148,25 +150,21 @@ webrtc.kickUser(socketId);
 
 ## Events
 
-<hr>
-
 As mentioned `Webrtc` instance emits events, which can be listened to with [EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener). Some of the events return data in `event.detail` property.
 
 | Name         | Description                                   | Data                                                                                   |
 | ------------ | --------------------------------------------- | -------------------------------------------------------------------------------------- |
 | createdRoom  | Successfuly created a room.                   |                                                                                        |
 | joinedRoom   | Successfuly joined a room.                    |                                                                                        |
-| leftRoom     | Successfuly left a room.                      | **roomId** - ID of the abandoned room.                                                 |
+| leftRoom     | Successfuly left a room.                      | **roomId** - ID of the abandoned room                                                  |
 | kicked       | You were kicked out of conference.            |                                                                                        |
 | userLeave    | User left the conference.                     | **socketId** - socket id of the user that left                                         |
 | newUser      | New user joined.                              | **socketId** - socket id of the joined user.<br> **stream** - media stream of new user |
-| removeUser   | Connections with user was closed and removed. | **socketId** - socket id of the removed users                                          |
-| notification | Notification from webrtc.                     | **notification** - notification text                                                   |
+| removeUser   | Connections with user was closed and removed. | **socketId** - socket id of the removed user                                           |
+| notification | Notification.                                 | **notification** - notification text                                                   |
 | error        | An error occured.                             | **error** - Error object                                                               |
 
 ## Getters
-
-<hr>
 
 | Name         | Description                             |
 | ------------ | --------------------------------------- |
