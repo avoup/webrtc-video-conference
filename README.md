@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://lh3.googleusercontent.com/J68ffoWBYBsMDTpuQbu_AiOn8SpAi4AycmZ4xblZluSPDWdPVqZFREbxucrfCMq-ciFOPQ-6bNn3ju7pOw=w480-h492-rw-no">
 </p>
+
 # WebRTC Video Conference
 
 **Live demo:** https://webrtc-video-conference-sample.herokuapp.com/
